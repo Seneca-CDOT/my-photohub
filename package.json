@@ -1,0 +1,18 @@
+{
+  "name": "My-PhotoHub",
+  "version": "1.0.0",
+  "description": "JavaScript example starter project",
+  "main": "gallery.html",
+  "scripts": {
+    "start": "parcel gallery.html --open",
+    "build": "parcel build gallery.html"
+  },
+  "dependencies": { "parcel-bundler": "^1.6.1" },
+  "devDependencies": {
+    "@babel/core": "7.2.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": ["javascript", "starter"]
+}

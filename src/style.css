@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif;
+    background: black;  
+    padding-top: 50px;
+  }
+  
+  *{
+    font-family: 'Poppins', sans-serif !important;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+h1{
+    color: #FFF;
+}
+
+/*searchbox*/
+
+    .custom_search{
+        color: #FFF !important;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 2px solid #FFF;
+        width: 240px !important;
+    }
+    .custom_search:focus{
+        box-shadow: none;
+        background: transparent;
+        border-bottom:2px solid #FFF;
+    }
+    .custom_search + .search_span{
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        left: 50%;
+        transition: width 0.5s, left 0.5s;
+    }
+    .custom_search:focus + .search_span{
+        width: 240px;
+        left: 0;
+        border-bottom: 2px solid #0b18cc;			
+    }
+    .custom_search::placeholder{
+        color: #FFF !important;
+    }
+
+    .search_button{
+        background: #1107a8;
+        width: 100px;
+        border: 0;
+    }
+    .search_button:focus{
+        border: 0;
+        box-shadow: none;
+    }
+    .search_button:active{
+        background: #0d10e4 !important;
+        box-shadow: none !important;
+    }
+
+    .search_button:hover{
+        background: #0ce5f5;
+    }
+
+
+/*navbar*/
+
+.navbar{
+background: #222 !important;
+line-height: 2rem !important;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 9999;
+}
+
+.navbar .navbar-brand{
+color: #FFF !important;
+
+}
+
+.navbar-nav .active a{
+color: #1268e9 !important;
+}
+
+.navbar-nav .nav-item .nav-link{
+color: #FFF;
+}
+.dropdown-menu {
+background: #22221E;
+}
+.dropdown-menu .dropdown-item{
+color: #FFF;
+transition: all 0.2s;
+}
+.dropdown-menu .dropdown-item:hover{
+background: #0a5bc5;
+color: #FFF;
+}
+.navbar-toggler-icon{
+color: #FFF !important;
+}
+.navbar-dark .navbar-toggler{
+border-color: #FFFFFF !important;
+}
+
+img 
+{
+    height: 300px;
+    width: auto;
+    padding: 5px;  
+    border-radius: 15px;
+}
+
+
+
+  
