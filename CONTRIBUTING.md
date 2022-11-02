@@ -1,4 +1,5 @@
-# Installation
+
+# Getting Started
 
 Install Node.js if you haven't already and run:
 `npm install`
@@ -15,5 +16,6 @@ or
 To start the local site use:
 
 `npm start`
+
 
 

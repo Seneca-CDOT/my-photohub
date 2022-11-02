@@ -1,10 +1,11 @@
-import "./styles.css";
+import "./gallery.css";
 document.getElementById("app").innerHTML = `
 <h1>Hello User!</h1>
 <div>
-There's never been a time where people had to cope with more images. At the same time, most companies take advantage of our desire to share what we create, charging for storage.
-
-My Photohub is designed to leverage the open web and make it easy for anyone to take a bunch of photos and turn them into a web page they can share with the world. You don't need to be a programmer to take advantage of the web or GitHub in order to share your photos.
+My Photohub is a web app that makes it easy to share your photos on the web. 
+My Photohub takes your images and optimizes them for the web, creates a beautiful HTML page to show them, and hosts everything in a new GitHub Repository owned by you! 
+Your photo web page is made available to the world via GitHub Pages. 
+Best of all, everything is free and you are in control of the end product.
 </div>
 `;
 
