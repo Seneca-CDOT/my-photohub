@@ -7,15 +7,14 @@ Install Node.js if you haven't already and run:
 Install **Fancybox** via the command:
 
 `npm install @fancyapps/ui`
-
 or 
-
 `yarn add  @fancyapps/ui`
 
 
 To start the local site use:
-
 `npm start`
+
+
 
 
 
