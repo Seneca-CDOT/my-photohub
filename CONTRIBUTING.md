@@ -1,4 +1,3 @@
-
 # Getting Started
 
 Install Node.js if you haven't already and run:
