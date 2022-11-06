@@ -2,12 +2,13 @@
 //import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
 import "@fontsource/poppins";
 import "../css/gallery.css"
-import "../node_modules/photoswipe/dist/photoswipe.css"
+import "photoswipe/dist/photoswipe.css"
+import PhotoSwipe from 'photoswipe/dist/photoswipe.esm';
 
-import Lightbox from '../node_modules/photoswipe/dist/photoswipe-lightbox.esm';
+import Lightbox from 'photoswipe/dist/photoswipe-lightbox.esm';
 const lightbox = new Lightbox({
   gallery: '#gallery',
   children: 'a',
-  pswpModule: () => import('../node_modules/photoswipe/dist/photoswipe.esm.js')
+  pswpModule: PhotoSwipe
 });
 lightbox.init();
