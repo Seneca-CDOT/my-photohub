@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html index.js"
+    "build": "parcel build index.html",
+    "deploy": "npm start && gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
