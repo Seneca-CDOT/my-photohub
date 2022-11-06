@@ -1,7 +1,4 @@
-// Include Lightbox 
-//import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
 import "@fontsource/poppins";
-import "../css/gallery.css"
 import "photoswipe/dist/photoswipe.css"
 import PhotoSwipe from 'photoswipe/dist/photoswipe.esm';
 
@@ -12,3 +9,4 @@ const lightbox = new Lightbox({
   pswpModule: PhotoSwipe
 });
 lightbox.init();
+
