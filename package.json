@@ -1,14 +1,16 @@
 {
   "name": "My-PhotoHub",
   "version": "1.0.0",
-  "description": "JavaScript example starter project",
-  "main": "index.html",
+  "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
+  "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "parcel-bundler": "^2.0.0",
+    "@fontsource/poppins": "^4.5.10",
+    "bootstrap": "^5.2.2",
+    "parcel": "^2.7.0",
     "photoswipe": "^5.3.3"
   },
   "devDependencies": {

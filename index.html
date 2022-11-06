@@ -6,40 +6,10 @@
   
     <title>My-PhotoHub📸</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" integrity="sha512-kwJUhJJaTDzGp6VTPBbMQWBFUof6+pv0SM3s8fo+E6XnPmVmtfwENK0vHYup3tsYnqHgRDoBDTJWoq7rnQw2+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+<script type="module" src="/src/index.js"></script>
 
-    
-<script type="module">
-  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
-  import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
-
-  const lightbox = new PhotoSwipeLightbox({
-      zoom: false,
-      counter: false,
-      showHideAnimationType: 'fade',
-      gallery: '#gallery',
-      children: 'a',
-      pswpModule: () => import('https://unpkg.com/photoswipe'),
-      padding: { top: 20, bottom: 20, left: 50, right: 50 }
-  });
-  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
-      type: 'auto'
-  });
-
-  lightbox.init();
-
-</script>
-
-          <link rel="stylesheet" href="css/gallery.css">
-          <link rel="stylesheet" href="css/photoswipe.css">
   </head>
 
   <body>
@@ -48,27 +18,10 @@
  
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">My-PhotoHub📸</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">About<span class="sr-only"></span></a>
-            </li>
-            
-        </ul>
-
-    </div>
 </nav>
 
     <p class="main">
-      <div class="pswp-gallery" id="gallery">
+      <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
         
         <a href="https://i.pinimg.com/550x/51/9b/c9/519bc900e094fda0731db75b3801a0e1.jpg" data-pswp-width="400" data-pswp-height="488">
         <img src="https://i.pinimg.com/550x/51/9b/c9/519bc900e094fda0731db75b3801a0e1.jpg" > </a>
