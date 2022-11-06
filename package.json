@@ -2,7 +2,6 @@
   "name": "My-PhotoHub",
   "version": "1.0.0",
   "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
