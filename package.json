@@ -4,8 +4,8 @@
   "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
   "main": "index.js",
   "scripts": {
-    "start": "npm start",
-    "build": "parcel build index.html"
+    "start": "parcel index.html --open",
+    "build": "npm start"
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
