@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm install ci",
     "deploy": "gh-pages -d dist",
     "start": "parcel index.html --open",
     "build": "parcel build index.html" 
