@@ -4,7 +4,8 @@
   "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "deploy": "npm run build && gh-pages -d dist -m Build v1"
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
@@ -13,7 +14,8 @@
     "photoswipe": "^5.3.3"
   },
   "devDependencies": {
-    "@babel/core": "7.2.0"
+    "@babel/core": "7.2.0",
+    "gh-pages": "^4.0.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"
