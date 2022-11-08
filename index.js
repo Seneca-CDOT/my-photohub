@@ -1,7 +1,7 @@
 import "@fontsource/poppins";
 import "photoswipe/dist/photoswipe.css"
 import PhotoSwipe from 'photoswipe/dist/photoswipe.esm';
-import "../css/gallery.css"
+import "./gallery.css"
 
 
 import Lightbox from 'photoswipe/dist/photoswipe-lightbox.esm';
