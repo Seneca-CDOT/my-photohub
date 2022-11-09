@@ -4,10 +4,10 @@
   "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
   "source":"index.html",
   "scripts": {
-    "predeploy": "rm -rf dist && parcel build index.html",
+    "predeploy": "del dist && parcel build index.html --public-url ./",
     "deploy": "gh-pages -d dist",
     "start": "parcel index.html --open",
-    "build": "parcel build --dist-dir dist"
+    "build": "parcel build index.html --public-url ./"
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
