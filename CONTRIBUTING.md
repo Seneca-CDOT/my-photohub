@@ -6,6 +6,9 @@ Install Node.js if you haven't already and run:
 To start the local site use:
 `npm start`
 
+To deploy updated versions:
+`npm run deploy`
+
 
 
 
