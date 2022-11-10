@@ -2,6 +2,7 @@ import { Octokit } from "@octokit/rest";
 import { StatusCodes } from "http-status-codes";
 import isValidPAT from "./validate-pat-token";
 import getUser from "./get-user";
+import createRepo from "./create-repo";
 
 const handlePost = async (request) => {
   const body = await request.formData();
@@ -11,7 +12,7 @@ const handlePost = async (request) => {
     const octokit = new Octokit({ auth: pat_token });
     const userVal = await getUser(octokit);
     if (userVal) {
-      const repoCreated = await getUser(octokit);
+      const repoCreated = await createRepo(octokit, userVal);
       if (repoCreated) {
         return StatusCodes.OK; // success
       } else {
