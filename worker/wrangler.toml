@@ -1,0 +1,6 @@
+name = "my-photohub"
+main = "index.js"
+compatibility_date = "2022-11-09"
+[dev]
+port = 8080
+local_protocol = "http"
