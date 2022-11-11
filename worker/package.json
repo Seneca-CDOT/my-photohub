@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "npx eslint .",
     "dev": "wrangler dev",
     "auth": "wrangler login",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +16,8 @@
     "http-status-codes": "^2.2.0",
     "validator": "^13.7.0",
     "wrangler": "^2.1.15"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0"
   }
 }
