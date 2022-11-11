@@ -7,7 +7,6 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-import { StatusCodes } from "http-status-codes";
 import { onRequestPost } from "./functions/on-req-post";
 
 const loginForm = `<!DOCTYPE html>
