@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Form, Modal, Navbar } from "react-bootstrap";
 
 function App() {
-  const [setToken] = React.useState(null);
+  const [token, setToken] = React.useState(null);
   const [repository, setRepository] = React.useState(null);
   const [show, setShow] = React.useState(false);
 
