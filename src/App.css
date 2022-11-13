@@ -2,21 +2,31 @@
   text-align: center;
 }
 
-.Drop-zone {
-  width: 100%;
+#img-preview {
+  height: 50vmin;
+  max-width: 180vmin;
+  pointer-events: none;
+  display: none;
+  border-radius: 20px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.Nav {
-  color: white;
-}
-
-.App-header {
+.preview {
   background-color: white;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #282c34;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Drop-zone {
+  width: 100%;
 }
