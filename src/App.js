@@ -13,6 +13,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 
+const fileTypes = ["jpg", "jpeg", "png", "bmp", "gif"];
 function App() {
   const [token, setToken] = React.useState(null);
   const [repository, setRepository] = React.useState(null);
@@ -51,7 +52,8 @@ function App() {
           <p>Drag and Drop or Click to Upload Images</p>
           <FileUploader
             name="file"
-            types={["jpg", "jpeg", "png", "bmp", "gif"]}
+            accept={fileTypes}
+            types={fileTypes}
             multiple={false}
             classes="Drop-zone"
             handleChange={(file) => {
