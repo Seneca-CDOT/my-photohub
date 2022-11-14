@@ -52,7 +52,7 @@ addEventListener("fetch", (event) => {
   const { request } = event;
   const { url } = request;
   // /login path
-  if (url.includes("login") && request.method === "GET") {
+  if (new URL(url).pathname === "/login" && request.method === "GET") {
     return event.respondWith(rawHtmlResponse(loginForm));
     // POST requests
   } else if (request.method === "POST") {
