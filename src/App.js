@@ -124,11 +124,14 @@ function App() {
             <Button
               variant="success"
               onClick={() => {
-                if (document.getElementById("token").value === "") {
-                  document.getElementById("token").focus();
+                let token = document.getElementById("token");
+                let repo = document.getElementById("repo");
+                let validRepo = "[A-za-z0-9_-]+/[A-za-z0-9_-]+";
+
+                if (token.value === "") {
+                  token.focus();
                   return;
-                }
-                if (document.getElementById("repo").value === "") {
+                } else if (repo.value === "" || !repo.value.match(validRepo)) {
                   document.getElementById("repo").focus();
                   return;
                 }
