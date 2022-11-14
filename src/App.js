@@ -28,7 +28,7 @@ function App() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              {repository
+              {repository && token
                 ? `Using repository ${repository} `
                 : `Not signed in `}
               &nbsp;&nbsp;
