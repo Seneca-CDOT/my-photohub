@@ -51,14 +51,11 @@ const handleRequest = async (request) => {
 addEventListener("fetch", (event) => {
   const { request } = event;
   const { url } = request;
-  // /login path
-  if (new URL(url).pathname === "/login" && request.method === "GET") {
+  // GET  request
+  if (new URL(url).pathname === "/" && request.method === "GET") {
     return event.respondWith(rawHtmlResponse(loginForm));
     // POST requests
   } else if (request.method === "POST") {
     return event.respondWith(handleRequest(request));
-    // GET requests
-  } else if (request.method === "GET") {
-    return event.respondWith(new Response("To login, navigate to: /login"));
   }
 });
