@@ -1,17 +1,19 @@
 const generateUniqueName = (username) => {
-  return `${username}-photohub-${Math.floor(Math.random() * 10000)}`;
+  return `${username}-photohub-${new Date(Date.now()).toLocaleDateString(
+    "en-CA"
+  )}`;
 };
 
-const createRepo = async (octokit, username) => {
+const createRepo = async (octokit, username, repoName) => {
   try {
     await octokit.rest.repos.createForAuthenticatedUser({
-      name: generateUniqueName(username),
+      name: repoName ? repoName : generateUniqueName(username),
       description: "Your repository generated using my-photohub",
       private: false,
-      // TODO: add more props as needed
     });
     return true;
-  } catch (e) {
+  } catch (err) {
+    console.error(err);
     return false;
   }
 };
