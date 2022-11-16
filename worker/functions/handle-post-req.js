@@ -14,15 +14,10 @@ const handlePost = async (request) => {
   const octokit = new Octokit({ auth: pat_token });
   try {
     const username = await getUser(octokit);
-    if (username) {
-      const repoCreated = await createRepo(octokit, username, repo_name);
-      if (repoCreated) {
-        return StatusCodes.OK; // success
-      } else {
-        return StatusCodes.CONFLICT; // failure
-      }
-    }
-    return StatusCodes.UNAUTHORIZED; // authentication error
+    if (!username) return StatusCodes.UNAUTHORIZED; // authentication error
+    const repoCreated = await createRepo(octokit, username, repo_name);
+    if (!repoCreated) return StatusCodes.CONFLICT; // failure
+    return StatusCodes.OK;
   } catch (err) {
     console.error(err);
   }
