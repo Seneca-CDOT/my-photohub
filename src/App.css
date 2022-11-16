@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-#img-preview {
+.img-preview {
   height: 50vmin;
   max-width: 180vmin;
   pointer-events: none;
