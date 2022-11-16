@@ -1,0 +1,43 @@
+{
+  "name": "my-photohub-1",
+  "version": "1.0.0",
+  "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humphd/my-photohub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humphd/my-photohub/issues"
+  },
+  "homepage": "https://github.com/humphd/my-photohub/#readme",
+  "dependencies": {
+    "@fontsource/poppins": "^4.5.10",
+    "parcel": "^2.7.0",
+    "photoswipe": "^5.3.3",
+    "eslint": "^8.27.0",
+    "http-status-codes": "^2.2.0",
+    "wrangler": "^2.1.15",
+    "octokit": "^2.0.10",
+    "@octokit/rest": "^19.0.5",
+    "react": "^18.2.0",
+    "bootstrap": "^5.2.2",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-bootstrap": "^2.6.0",
+    "react-drag-drop-files": "^2.3.7",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0"
+  }
+}
