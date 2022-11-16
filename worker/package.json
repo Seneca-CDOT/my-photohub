@@ -1,7 +1,7 @@
 {
-  "name": "worker",
+  "name": "my-photohub",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint .",
