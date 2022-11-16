@@ -1,18 +1,21 @@
 import { Octokit } from "@octokit/rest";
 import { StatusCodes } from "http-status-codes";
-import isValidPAT from "./validate-pat-token";
+import isValidInput from "./validate-input";
 import getUser from "./get-user";
 import createRepo from "./create-repo";
 
 const handlePost = async (request) => {
   const body = await request.formData();
-  const { pat_token } = Object.fromEntries(body);
-  const validToken = isValidPAT(pat_token);
-  if (validToken) {
-    const octokit = new Octokit({ auth: pat_token });
-    const userVal = await getUser(octokit);
-    if (userVal) {
-      const repoCreated = await createRepo(octokit, userVal);
+  const { pat_token, repo_name } = Object.fromEntries(body);
+  const validInput = isValidInput(pat_token, repo_name);
+
+  if (!validInput) return StatusCodes.BAD_REQUEST;
+
+  const octokit = new Octokit({ auth: pat_token });
+  try {
+    const username = await getUser(octokit);
+    if (username) {
+      const repoCreated = await createRepo(octokit, username, repo_name);
       if (repoCreated) {
         return StatusCodes.OK; // success
       } else {
@@ -20,8 +23,8 @@ const handlePost = async (request) => {
       }
     }
     return StatusCodes.UNAUTHORIZED; // authentication error
-  } else {
-    return StatusCodes.BAD_REQUEST; // validation error
+  } catch (err) {
+    console.error(err);
   }
 };
 export default handlePost;
