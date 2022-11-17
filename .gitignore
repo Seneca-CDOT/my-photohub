@@ -102,7 +102,6 @@ typings/
 # TernJS port file
 .tern-port
 
-
 # Logs
 logs
 *.log
