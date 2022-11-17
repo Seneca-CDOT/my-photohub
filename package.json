@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
   "scripts": {
-    "lint": "npx eslint .",
-    "dev": "wrangler dev worker/index",
-    "auth": "wrangler login",
+    "worker": "wrangler dev worker/index",
+    "worker:auth": "wrangler login",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
