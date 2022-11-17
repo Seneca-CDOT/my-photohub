@@ -13,7 +13,7 @@
     "@fontsource/poppins": "^4.5.10",
     "bootstrap": "^5.2.2",
     "parcel": "^2.7.0",
-    "photoswipe": "^5.3.3"
+    "photoswipe": "^5.3.3"  
   },
   "devDependencies": {
     "eslint": "^8.27.0",
