@@ -2,10 +2,9 @@
   "name": "my-photohub",
   "version": "1.0.0",
   "description": "My Photohub is a web app that makes it easy to share your photos on the web.",
-  "main": "index.js",
   "scripts": {
     "lint": "npx eslint .",
-    "dev": "wrangler dev",
+    "dev": "wrangler dev worker/index",
     "auth": "wrangler login",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
