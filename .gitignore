@@ -80,7 +80,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -102,6 +101,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+
 # Logs
 logs
 *.log
@@ -232,3 +233,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
