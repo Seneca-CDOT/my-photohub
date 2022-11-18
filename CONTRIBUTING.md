@@ -11,8 +11,8 @@ To deploy updated versions:
 
 # Using Cloudflare Workers
 
-1. Run `npx wrangler dev src/index.js` in your terminal to start a development server
+1. Run `npx wrangler dev <filepath>` in your terminal to start a development server
 1. Open a browser tab at http://localhost:8080/ to see your worker in action
-1. Run `npx wrangler publish src/index.js --name my-worker` to publish your worker
+1. Run `npx wrangler publish <file-path> --name <worker-name>` to publish your worker
 
 Learn more at https://developers.cloudflare.com/workers/
