@@ -9,7 +9,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "auth-worker": "wrangler dev ./worker/index",
-    "auth-worker:login": "wrangler login",
+    "auth-worker:login": "wrangler login"
   },
   "repository": {
     "type": "git",
