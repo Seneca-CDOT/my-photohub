@@ -1,25 +1,41 @@
 const { unstable_dev } = require("wrangler");
+const { loginForm } = require("./functions/response");
+require("isomorphic-fetch");
 
-describe("Worker", () => {
+describe("CloudFlare Worker from wrangler package", () => {
 	let worker;
 
 	beforeAll(async () => {
 		worker = await unstable_dev(
-			"src/index.js",
+			"worker/index.js",
 			{},
 			{ disableExperimentalWarning: true }
 		);
 	});
 
 	afterAll(async () => {
-		await worker.stop();
+		if (worker) await worker.stop();
 	});
 
-	it("should return Hello World", async () => {
-		const resp = await worker.fetch();
-		if (resp) {
+	describe("GET fetch", () => {
+		let resp;
+		beforeAll(async () => {
+			resp = await worker.fetch();
+		})
+
+		test("response status should be 200", () => {
+			const status = resp.status;
+			expect(status).toBe(200);
+		});
+
+		test("response content-type should be text/html", () => {
+			const contentType = resp.headers.get("Content-Type");
+			expect(contentType).toMatch(/text\/html/);
+		});
+
+		test("response text should be the login form", async () => {
 			const text = await resp.text();
-			expect(text).toMatchInlineSnapshot(`"Hello World!"`);
-		}
+			expect(text).toBe(loginForm());
+		});
 	});
 });

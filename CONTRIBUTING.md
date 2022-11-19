@@ -9,6 +9,9 @@ To start the local site use:
 To deploy updated versions:
 `npm run deploy`
 
+To run all tests via Jest:
+`npm test`
+
 # Using Cloudflare Workers
 
 1. Run `npx wrangler dev <filepath>` in your terminal to start a development server
