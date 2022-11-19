@@ -1,7 +1,10 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import PropTypes from 'prop-types';
 
-export default function AuthDialog({ show, setShow, setToken, setRepository }) {
+
+
+function AuthDialog({ show, setShow, setToken, setRepository }) {
   const tokenEl = useRef(null);
   const repoEl = useRef(null);
 
@@ -63,3 +66,12 @@ export default function AuthDialog({ show, setShow, setToken, setRepository }) {
     </Modal>
   );
 }
+
+AuthDialog.propTypes = {
+  show: PropTypes.bool,
+  setToken: PropTypes.func,
+  setRepository: PropTypes.func,
+  setShow: PropTypes.func
+}
+
+export default AuthDialog

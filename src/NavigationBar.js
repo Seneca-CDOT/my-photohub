@@ -1,6 +1,8 @@
-import { Button, Container, Navbar } from "react-bootstrap";
+import React, { Button, Container, Navbar } from "react-bootstrap";
+import PropTypes from 'prop-types';
 
-export default function NavigationBar({isAuthorized, repository, requestAuthDialog}) {
+
+function NavigationBar({isAuthorized, repository, requestAuthDialog}) {
     return <>
       <Navbar bg="dark" variant="dark">
         <Container className="Nav">
@@ -27,3 +29,11 @@ export default function NavigationBar({isAuthorized, repository, requestAuthDial
       </Navbar>
     </>
 }
+
+NavigationBar.propTypes = {
+  isAuthorized:PropTypes.bool,
+  repository:PropTypes.string,
+  requestAuthDialog:PropTypes.func,
+}
+
+export default NavigationBar
