@@ -1,77 +1,73 @@
 body {
-    font-family: sans-serif;
-    background: black;  
-    padding-top: 50px;
-  }
-  
-  *{
-    font-family: 'Poppins', sans-serif !important;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    user-select: none;
+  font-family: sans-serif;
+  background: black;
+  padding-top: 50px;
 }
 
+* {
+  font-family: "Poppins", sans-serif !important;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
 
-h1{
-    color: #FFF;
+h1 {
+  color: #fff;
 }
 
 /*navbar*/
 
-.navbar{
-background: #222 !important;
-line-height: 2rem !important;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 9999;
+.navbar {
+  background: #222 !important;
+  line-height: 2rem !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
-.navbar .navbar-brand{
-color: #FFF !important;
-margin-left: 15px;
+.navbar .navbar-brand {
+  color: #fff !important;
+  margin-left: 15px;
 }
 
-.navbar-nav .active a{
-color: #0ebbff !important;
+.navbar-nav .active a {
+  color: #0ebbff !important;
 }
 
-.navbar-nav .nav-item .nav-link{
-color: #FFF;
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
 }
 .dropdown-menu {
-background: #22221E;
+  background: #22221e;
 }
-.dropdown-menu .dropdown-item{
-color: #FFF;
-transition: all 0.2s;
+.dropdown-menu .dropdown-item {
+  color: #fff;
+  transition: all 0.2s;
 }
-.dropdown-menu .dropdown-item:hover{
-background: #0a5bc5;
-color: #FFF;
+.dropdown-menu .dropdown-item:hover {
+  background: #0a5bc5;
+  color: #fff;
 }
-.navbar-toggler-icon{
-color: #FFF !important;
+.navbar-toggler-icon {
+  color: #fff !important;
 }
-.navbar-dark .navbar-toggler{
-border-color: #FFFFFF !important;
-}
-
-img 
-{
-    height: 300px;
-    width: auto;
-    padding: 5px;  
-    border-radius: 15px;
+.navbar-dark .navbar-toggler {
+  border-color: #ffffff !important;
 }
 
-
-.container{
-    max-width: 1860px;
-    text-align:center;
-    display: flex;
+img {
+  height: 300px;
+  width: auto;
+  padding: 5px;
+  border-radius: 15px;
 }
-  
+
+.container {
+  max-width: 1860px;
+  text-align: center;
+  display: flex;
+}

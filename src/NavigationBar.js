@@ -1,7 +1,12 @@
 import { Button, Container, Navbar } from "react-bootstrap";
 
-export default function NavigationBar({isAuthorized, repository, requestAuthDialog}) {
-    return <>
+export default function NavigationBar({
+  isAuthorized,
+  repository,
+  requestAuthDialog,
+}) {
+  return (
+    <>
       <Navbar bg="dark" variant="dark">
         <Container className="Nav">
           <Navbar.Brand href="/">My Photohub 📸</Navbar.Brand>
@@ -26,4 +31,5 @@ export default function NavigationBar({isAuthorized, repository, requestAuthDial
         </Container>
       </Navbar>
     </>
+  );
 }

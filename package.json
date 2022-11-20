@@ -9,7 +9,9 @@
     "test": "jest --",
     "eject": "react-scripts eject",
     "auth-worker": "wrangler dev ./worker/index",
-    "auth-worker:login": "wrangler login"
+    "auth-worker:login": "wrangler login",
+    "format": "npx prettier --write .",
+    "format:check": "npx prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -45,7 +47,8 @@
   "devDependencies": {
     "eslint": "^8.27.0",
     "isomorphic-fetch": "^3.0.0",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "prettier": "2.7.1"
   },
   "browserslist": {
     "production": [

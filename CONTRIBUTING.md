@@ -12,6 +12,12 @@ To deploy updated versions:
 To run all tests via Jest:
 `npm test`
 
+To run Prettier via command line:
+`npm run format`
+
+To check if your files are formatted:
+`npm run format:check`
+
 # Using Cloudflare Workers
 
 1. Run `npx wrangler dev <filepath>` in your terminal to start a development server
