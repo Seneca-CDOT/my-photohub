@@ -9,7 +9,8 @@
     "test": "jest --",
     "eject": "react-scripts eject",
     "auth-worker": "wrangler dev ./worker/index",
-    "auth-worker:login": "wrangler login"
+    "auth-worker:login": "wrangler login",
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "eslint": "^8.27.0",
+    "eslint-plugin-react": "^7.31.11",
     "isomorphic-fetch": "^3.0.0",
     "jest": "^27.5.1"
   },
