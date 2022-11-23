@@ -1,12 +1,13 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FileUploader } from "react-drag-drop-files";
 import { Button, OverlayTrigger, Tooltip } from "react-bootstrap";
+import PropTypes from 'prop-types';
 
 const fileTypes = ["jpg", "jpeg", "png", "bmp", "gif"];
 
-export default function UploadInterface({ isAuthorized }) {
+function UploadInterface({ isAuthorized }) {
   const [image, setImage] = useState(null);
   const imgPreviewEl = useRef(null);
 
@@ -63,3 +64,9 @@ export default function UploadInterface({ isAuthorized }) {
     </div>
   );
 }
+
+UploadInterface.propTypes = {
+  isAuthorized:PropTypes.bool
+}
+
+export default UploadInterface
