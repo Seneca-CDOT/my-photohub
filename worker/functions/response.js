@@ -1,5 +1,5 @@
 module.exports.loginForm = (errorMessage = "") => {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -20,7 +20,7 @@ module.exports.loginForm = (errorMessage = "") => {
       ${errorMessage}
   </body>
   </html>`;
-  };
+};
 
 /**
  * rawHtmlResponse returns HTML inputted directly
@@ -28,10 +28,10 @@ module.exports.loginForm = (errorMessage = "") => {
  //  * @param {string} html
 //  */
 module.exports.rawHtmlResponse = (html) => {
-    const init = {
-        headers: {
-        "content-type": "text/html;charset=UTF-8",
-        },
-    };
-    return new Response(html, init);
+  const init = {
+    headers: {
+      "content-type": "text/html;charset=UTF-8",
+    },
+  };
+  return new Response(html, init);
 };

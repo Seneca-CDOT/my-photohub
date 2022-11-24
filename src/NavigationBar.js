@@ -27,6 +27,7 @@ function NavigationBar({isAuthorized, repository, requestAuthDialog}) {
         </Container>
       </Navbar>
     </>
+  );
 }
 
 NavigationBar.propTypes = {
