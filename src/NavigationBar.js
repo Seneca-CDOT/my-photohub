@@ -1,17 +1,16 @@
-import React, { Button, Container, Navbar } from "react-bootstrap";
+import React, { Button, Container, Navbar } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-function NavigationBar({isAuthorized, repository, requestAuthDialog}) {
-    return <>
+function NavigationBar({ isAuthorized, repository, requestAuthDialog }) {
+  return (
+    <>
       <Navbar bg="dark" variant="dark">
         <Container className="Nav">
           <Navbar.Brand href="/">My Photohub 📸</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              {isAuthorized
-                ? `Using repository ${repository} `
-                : `Not signed in `}
+              {isAuthorized ? `Using repository ${repository} ` : `Not signed in `}
               &nbsp;&nbsp;
               <Button
                 variant="outline-success"
@@ -31,9 +30,9 @@ function NavigationBar({isAuthorized, repository, requestAuthDialog}) {
 }
 
 NavigationBar.propTypes = {
-  isAuthorized:PropTypes.bool,
-  repository:PropTypes.string,
-  requestAuthDialog:PropTypes.func,
-}
+  isAuthorized: PropTypes.bool,
+  repository: PropTypes.string,
+  requestAuthDialog: PropTypes.func,
+};
 
-export default NavigationBar
+export default NavigationBar;
