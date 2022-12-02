@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Stack, Paper, styled } from '@mui/material';
 
 import NavigationBar from './NavigationBar';
@@ -15,9 +15,9 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function App() {
-  const [token, setToken] = React.useState(null);
-  const [repository, setRepository] = React.useState(null);
-  const [show, setShow] = React.useState(true);
+  const [token, setToken] = useState(null);
+  const [repository, setRepository] = useState(null);
+  const [show, setShow] = useState(true);
   const isAuthorized = token && repository;
 
   return (
