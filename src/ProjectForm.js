@@ -37,6 +37,12 @@ function ProjectForm() {
     setDate(date);
   }
 
+  function handleSubmit() {
+    console.log(
+      `Name: ${name}\nProjectName: ${projectName}\nDate: ${date}\nDescription${description}`
+    );
+  }
+
   useEffect(() => {
     setProjectName(name.replace(/[^A-Za-z_0-9]/g, '-'));
   }, [name]);
@@ -80,7 +86,9 @@ function ProjectForm() {
                 fullWidth
               />
             </Item>
-            <Button variant="contained">Submit</Button>
+            <Button variant="contained" onClick={handleSubmit}>
+              Submit
+            </Button>
           </Stack>
         </CardContent>
       </Card>
