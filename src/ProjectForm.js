@@ -24,10 +24,11 @@ function ProjectForm() {
     switch (e.target.id) {
       case 'name':
         setName(e.target.value);
-
         break;
       case 'description':
         setDescription(e.target.value);
+        break;
+      default:
         break;
     }
   }
@@ -67,7 +68,7 @@ function ProjectForm() {
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DesktopDatePicker
                   label="Date"
-                  inputFormat="MM/DD/YYYY"
+                  inputFormat="YYYY-MM-DD"
                   value={date}
                   onChange={handleDateChange}
                   renderInput={(params) => <TextField {...params} />}
