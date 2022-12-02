@@ -3,8 +3,8 @@ import { Card, CardContent, Stack, TextField, Button } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import { DesktopDatePicker, LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import moment from 'moment';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import dayjs from 'dayjs';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -18,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function ProjectForm() {
   const [name, setName] = useState('');
   const [projectName, setProjectName] = useState('');
-  const [date, setDate] = useState(moment());
+  const [date, setDate] = useState(dayjs());
   const [description, setDescription] = useState('');
 
   function handleChange(e) {
@@ -65,7 +65,7 @@ function ProjectForm() {
               />
             </Item>
             <Item>
-              <LocalizationProvider dateAdapter={AdapterMoment}>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DesktopDatePicker
                   label="Date"
                   inputFormat="MM/DD/YYYY"
