@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import React, { useRef } from 'react';
+import { Button, Form, Modal } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 function AuthDialog({ show, setShow, setToken, setRepository }) {
@@ -23,7 +23,7 @@ function AuthDialog({ show, setShow, setToken, setRepository }) {
             <Form.Control type="password" ref={tokenEl} autoFocus />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Repository (username/repository_name)</Form.Label>
+            <Form.Label>Repository Name</Form.Label>
             <Form.Control type="text" ref={repoEl} />
           </Form.Group>
         </Form>
@@ -43,13 +43,12 @@ function AuthDialog({ show, setShow, setToken, setRepository }) {
             let token = tokenEl.current;
             let repo = repoEl.current;
 
-            const validRepo =
-              /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}\/[a-zA-Z0-9_.-]+$/i;
+            const validRepo = /^[a-zA-Z0-9_.-]+$/i;
 
-            if (token.value === "") {
+            if (token.value === '') {
               token.focus();
               return;
-            } else if (repo.value === "" || !repo.value.match(validRepo)) {
+            } else if (repo.value === '' || !repo.value.match(validRepo)) {
               repo.focus();
               return;
             }
@@ -69,7 +68,7 @@ AuthDialog.propTypes = {
   show: PropTypes.bool,
   setToken: PropTypes.func,
   setRepository: PropTypes.func,
-  setShow: PropTypes.func
-}
+  setShow: PropTypes.func,
+};
 
-export default AuthDialog
+export default AuthDialog;

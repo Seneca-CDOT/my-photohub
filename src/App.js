@@ -1,13 +1,13 @@
-import React from "react";
-import NavigationBar from "./NavigationBar";
-import AuthDialog from "./AuthDialog";
-import UploadInterface from "./UploadInterface";
+import React from 'react';
+import NavigationBar from './NavigationBar';
+import AuthDialog from './AuthDialog';
+import UploadInterface from './UploadInterface';
 
 function App() {
   const [token, setToken] = React.useState(null);
   const [repository, setRepository] = React.useState(null);
   const [show, setShow] = React.useState(true);
-  const isAuthorized = token && repository;
+  const isAuthorized = Boolean(token && repository);
 
   return (
     <>
@@ -19,14 +19,9 @@ function App() {
         }}
       />
 
-      <AuthDialog
-        show={show}
-        setShow={setShow}
-        setToken={setToken}
-        setRepository={setRepository}
-      />
+      <AuthDialog show={show} setShow={setShow} setToken={setToken} setRepository={setRepository} />
 
-      <UploadInterface isAuthorized={isAuthorized} />
+      <UploadInterface isAuthorized={isAuthorized} token={token} repository={repository} />
     </>
   );
 }
