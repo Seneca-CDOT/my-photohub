@@ -38,6 +38,7 @@
     "react-dom": "^18.2.0",
     "react-drag-drop-files": "^2.3.7",
     "react-scripts": "5.0.1",
+    "sharp": "^0.31.2",
     "workbox-core": "^6.5.4",
     "workbox-expiration": "^6.5.4",
     "workbox-precaching": "^6.5.4",
