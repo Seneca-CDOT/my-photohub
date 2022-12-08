@@ -23,7 +23,7 @@ jobs:
           git checkout $TARGET_BRANCH       # checkout to your branch
           git checkout ${GITHUB_REF##*/} -- $files # copy files from the source branch
           ls -1 $SRC_FOLDER_PATH > filelist.txt    # put filelist to root
-          test -e index.html || git show master:.github/index.html > index.html   # copy index file
+          test -e index.html || git show issue#5-gen-web:.github/index.html > index.html   # copy index file
           git add -A                # Add all files
           git diff-index --quiet HEAD ||  git commit -am "Optimized Files Updated"  # commit to the repository (ignore if no mod)
           git push origin $TARGET_BRANCH # push to remote branch
