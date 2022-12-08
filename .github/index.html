@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>My Photohub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin: 0; background: #333; }
+    header { 
+      padding: .5vw;
+      font-size: 0;
+      display: -ms-flexbox;
+      -ms-flex-wrap: wrap;
+      -ms-flex-direction: column;
+      -webkit-flex-flow: row wrap; 
+      flex-flow: row wrap; 
+      display: -webkit-box;
+      display: flex;
+    }
+    header div { 
+      -webkit-box-flex: auto;
+      -ms-flex: auto;
+      flex: auto; 
+      width: 200px; 
+      margin: .5vw; 
+    }
+    header div img { 
+      width: 100%; 
+      height: auto; 
+    }
+    @media screen and (max-width: 400px) {
+      header div { margin: 0; }
+      header { padding: 0; }
+    }
+  </style>
+<body>
+  <header id="gallery">
+  </header>
+  <script>
+    const addImg = (url) => {
+      if (!url) return
+      const gallery = document.querySelector('#gallery')
+      const img = document.createElement("img")
+      img.src = `./optimized/${url}`
+      const division = document.createElement("div")
+      division.appendChild(img)
+      gallery.appendChild(division)
+    }
+
+    fetch("./filelist.txt")
+      .then( response => response.text() )
+      .then( text => {
+        const files = text.split(/\r?\n/i)
+        files.forEach(addImg)
+      })
+      .catch(console.error)
+  </script>
+</body>
+</html>  

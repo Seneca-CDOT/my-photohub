@@ -1,0 +1,29 @@
+name: Copy folder to other branch
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  copy:
+    name: Copy my folder
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: copy
+        env:
+          SRC_FOLDER_PATH: 'optimized'
+          TARGET_BRANCH: 'gh-pages'
+        run: |
+          files=$(find $SRC_FOLDER_PATH -type f) # get the file list
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git pull                         # fetch branches
+          git checkout $TARGET_BRANCH       # checkout to your branch
+          git checkout ${GITHUB_REF##*/} -- $files # copy files from the source branch
+          ls -1 $SRC_FOLDER_PATH > filelist.txt    # put filelist to root
+          test -e index.html || git show master:.github/index.html > index.html   # copy index file
+          git add -A                # Add all files
+          git diff-index --quiet HEAD ||  git commit -am "Optimized Files Updated"  # commit to the repository (ignore if no mod)
+          git push origin $TARGET_BRANCH # push to remote branch
