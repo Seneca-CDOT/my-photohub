@@ -19,7 +19,7 @@ function App() {
   const [token, setToken] = useState(null);
   const [repository, setRepository] = useState(null);
   const [show, setShow] = useState(true);
-  const isAuthorized = token && repository;
+  const isAuthorized = token && repository && true;
 
   return (
     <>
@@ -34,11 +34,12 @@ function App() {
       <AuthDialog show={show} setShow={setShow} setToken={setToken} setRepository={setRepository} />
       <Stack direction={'row'}>
         <Item>
-          <UploadInterface isAuthorized={isAuthorized} uploadFile={file => {
-            githubUpload(token, repository, file)
-            .then(console.log)
-            .catch(console.error)
-          }} />
+          <UploadInterface
+            isAuthorized={isAuthorized}
+            uploadFile={(file) => {
+              githubUpload(token, repository, file).then(console.log).catch(console.error);
+            }}
+          />
         </Item>
         <Item>
           <ProjectForm />
