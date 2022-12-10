@@ -42,6 +42,7 @@
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-drag-drop-files": "^2.3.7",
+    "react-hot-toast": "^2.4.0",
     "react-scripts": "5.0.1",
     "workbox-core": "^6.5.4",
     "workbox-expiration": "^6.5.4",
