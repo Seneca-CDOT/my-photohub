@@ -1,6 +1,6 @@
 # Getting Started
 
-Install [Node.js](https://nodejs.org/) if you haven't already, and run to install project dependencies:
+Install [Node.js](https://nodejs.org/) and run the following command to install project dependencies:
 `npm install`
 
 To start the local site use:
