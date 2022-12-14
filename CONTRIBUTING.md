@@ -1,3 +1,16 @@
+# How to Contribute
+
+1. Look for an existing issue you want to solve, file your own issue if you've found a bug or something you want to see from this project.
+1. Fork the project to create your own copy of the project on your GitHub account.
+1. Clone your fork locally using [Git](https://git-scm.com/): 
+`git clone https://github.com/<your-github-username>/my-photohub`
+1. Create a new branch and checkout into that branch: 
+`git checkout -b <your-branch-name>`
+1. Make your changes to address the issue you are taking on.
+1. Create a pull request to propose your changes to the project.
+1. Address code review comments from the project's contributors.
+1. Wait for your pull request to be merged.
+
 # Getting Started
 
 Install [Node.js](https://nodejs.org/) and run the following command to install project dependencies:
@@ -28,16 +41,3 @@ To run the linter:
 1. Run `npx wrangler publish <file-path> --name <worker-name>` to publish your worker
 
 Learn more at https://developers.cloudflare.com/workers/
-
-# How to Contribute
-
-1. Look for an existing issue you want to solve, file your own issue if you've found a bug or something you want to see from this project.
-1. Fork the project to create your own copy of the project on your GitHub account.
-1. Clone your fork locally using [Git](https://git-scm.com/): 
-`git clone https://github.com/<your-github-username>/my-photohub`
-1. Create a new branch and checkout into that branch: 
-`git checkout -b <your-branch-name>`
-1. Make your changes to address the issue you are taking on.
-1. Create a pull request to propose your changes to the project.
-1. Address code review comments from the project's contributors.
-1. Wait for your pull request to be merged.
