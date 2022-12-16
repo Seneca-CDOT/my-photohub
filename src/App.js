@@ -5,6 +5,7 @@ import NavigationBar from './NavigationBar';
 import AuthDialog from './AuthDialog';
 import UploadInterface from './UploadInterface';
 import ProjectForm from './ProjectForm';
+import { githubUpload } from './github-upload';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -18,8 +19,8 @@ function App() {
   const [token, setToken] = useState(null);
   const [repository, setRepository] = useState(null);
   const [show, setShow] = useState(true);
-  const isAuthorized = token && repository;
-
+  const isAuthorized = !!(token && repository); // or Boolean(...) 
+  
   return (
     <>
       <NavigationBar
@@ -33,7 +34,12 @@ function App() {
       <AuthDialog show={show} setShow={setShow} setToken={setToken} setRepository={setRepository} />
       <Stack direction={'row'}>
         <Item>
-          <UploadInterface isAuthorized={isAuthorized} />
+          <UploadInterface
+            isAuthorized={isAuthorized}
+            uploadFile={(file) => {
+              githubUpload(token, repository, file).then(console.log).catch(console.error);
+            }}
+          />
         </Item>
         <Item>
           <ProjectForm />

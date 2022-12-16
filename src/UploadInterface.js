@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const fileTypes = ["jpg", "jpeg", "png", "bmp", "gif"];
 
-function UploadInterface({ isAuthorized }) {
+function UploadInterface({ isAuthorized, uploadFile }) {
   const [image, setImage] = useState(null);
   const imgPreviewEl = useRef(null);
 
@@ -55,6 +55,9 @@ function UploadInterface({ isAuthorized }) {
               variant="success"
               className="mt-3"
               disabled={!(isAuthorized && image)}
+              onClick={() => {
+                uploadFile(image);
+              }}
             >
               Upload
             </Button>
@@ -66,7 +69,8 @@ function UploadInterface({ isAuthorized }) {
 }
 
 UploadInterface.propTypes = {
-  isAuthorized:PropTypes.bool
+  isAuthorized:PropTypes.bool,
+  uploadFile: PropTypes.func
 }
 
 export default UploadInterface
