@@ -19,8 +19,8 @@ function App() {
   const [token, setToken] = useState(null);
   const [repository, setRepository] = useState(null);
   const [show, setShow] = useState(true);
-  const isAuthorized = token && repository && true;
-
+  const isAuthorized = !!(token && repository); // or Boolean(...) 
+  
   return (
     <>
       <NavigationBar
